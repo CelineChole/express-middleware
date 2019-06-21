@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const moment = require('moment');
-const StarWars = require('./StarWars');
+const starWars = require('./StarWars');
 
 const app = express();
 
@@ -11,12 +11,18 @@ const logger = (req, res, next) => {
 }
 
 // init middleware
-app.use(logger);
+// app.use(logger);
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/api/StarWars', (req, res) => {
-    res.json(StarWars);
+// get all
+app.get('/api/starwars', (req, res) => {
+    res.json(starwars);
+})
+
+// get one
+app.get('/api/starwars/:id', (req, res) => {
+    res.json(starWars.filter(char => char.id === parseInt(req.params.id)))
 })
 
 const PORT = process.env.PORT || 5000;
