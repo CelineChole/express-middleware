@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const logger = (req, res, next) => {
-    console.log('I am a logger');
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
     next();
 }
 
