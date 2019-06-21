@@ -18,7 +18,13 @@
   "homepage": "https://github.com/CelineChole/express-middleware#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+<<<<<<< HEAD
     "express": "^4.17.1",
+=======
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+>>>>>>> branch-2
     "nodemon": "^1.19.1"
   }
 }

@@ -1,9 +1,8 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+const express = require('express');
 
-var app = express();
+const app = express();
 
+<<<<<<< HEAD
 var logger = function(req, res, next){
     console.log('logging...');
     next();
@@ -18,9 +17,13 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
+=======
+app.get('/', (req, res) => {
+>>>>>>> branch-2
     res.send('It is a beautiful day')
-})
+});
 
-app.listen(3000, function() {
-    console.log('Server started on port 3000')
-})
+const PORT = process.env.PORT || 5000;
+
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
