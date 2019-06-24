@@ -17,12 +17,22 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // get all
 app.get('/api/starwars', (req, res) => {
-    res.json(starwars);
+    res.json(starWars);
 })
 
 // get one
 app.get('/api/starwars/:id', (req, res) => {
-    res.json(starWars.filter(char => char.id === parseInt(req.params.id)))
+    const char = starWars.filter(char => char.id === parseInt(req.params.id))
+    if(!char.length) {
+        // normally we 404, not throw an error
+        throw new Error('The force was weak with that character!')
+    }
+    res.json(char[0])
+});
+
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke! ' + '\r\n' + err.message)
 })
 
 const PORT = process.env.PORT || 5000;
