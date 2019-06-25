@@ -21,9 +21,11 @@ Live code steps
 ## Branch 2
 - Import Express: `const express = require('express');`
 - Create app: `const app = express();`
-- Install [Nodemon](https://www.npmjs.com/package/nodemon) `npm i -D nodemon` 
-  What is Nodemon?
-  Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
+- Install [Nodemon](https://www.npmjs.com/package/nodemon) `npm i -D nodemon`
+<details>
+<summary>What is Nodemon?</summary>
+<p>Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.</p>
+</details>
   
 - App.listen:
 ```js
