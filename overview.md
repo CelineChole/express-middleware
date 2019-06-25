@@ -7,14 +7,16 @@ Live code steps
  - `npm init` to create a package.json
 <details>
 <summary>What is Package.json?</summary>
-<p>The package.json file is the heart of Node.js system. It is the manifest file of any Node.js project and contains the      metadata of the project.</p>
+The package.json file is the heart of Node.js system. It is the manifest file of any Node.js project and contains the      metadata of the project.
 </details>
 	 
     
     
 - `npm install express` There is no need of '--save' since npm 5.0.0
 - Create index.js file
-- Console.log('It is a beautiful day')
+```js
+Console.log('It is a beautiful day')
+```
 - Run Node server with the command `Node index` 'It is a beautiful day' should appear in the console.
 - Gitignore one liner : touch .gitignore && echo "node_modules/" >> .gitignore
 
@@ -24,7 +26,7 @@ Live code steps
 - Install [Nodemon](https://www.npmjs.com/package/nodemon) `npm i -D nodemon`
 <details>
 <summary>What is Nodemon?</summary>
-<p>Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.</p>
+Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
 </details>
   
 - App.listen:
