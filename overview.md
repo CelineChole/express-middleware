@@ -65,9 +65,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 ```js
 let logger = function(req, res, next){
-	console.log('I am the logger');
-	next();
-	}
+console.log('I am the logger');
+next();
+}
 ```
 
 ```js
@@ -80,8 +80,10 @@ const logger = (req, res, next) => {
 	next();
 	}
 ```
-moment is ....
+[Moment](https://momentjs.com/) allows to parse, validate, manipulate, and display dates and times in JavaScript.
+
 - `npm install moment`
+
 ```js
 const logger = (req, res, next) => {
 console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
