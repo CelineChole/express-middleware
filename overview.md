@@ -51,10 +51,10 @@ app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname, 'public', index.html))
 });
 ```
-- Create public folder, create html file: mkdir / touch
+- Create public folder, create html file
 - Copy-paste html boilerplate
 - Go to localhost and inspect - notice that it is now displaying our html file.
-- Set a static folder using an Express buil-in Middleware:
+- Set a static folder using an Express built-in Middleware:
 ```js
 app.use(express.static(path.join(__dirname, 'public')))
 ```
@@ -94,7 +94,7 @@ next();
 ```
 
 ## Branch 5
-- Create a file with characters (see GitHub repo)
+- Create a file with characters (see GitHub repo: StarWars.js)
 - Create a route to access all characters
 - Create a route to access only one character
 
