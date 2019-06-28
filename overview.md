@@ -96,7 +96,19 @@ next();
 ## Branch 5
 - Create a file with characters (see GitHub repo: StarWars.js)
 - Create a route to access all characters
+```js
+app.get('/', (req, res, next) => {
+    res.send(StarWars);
+    next();
+})
+```
 - Create a route to access only one character
+```js
+app.get('/:id', (req, res) => {
+    const char = StarWars.filter(char => char.id === parseInt(req.params.id));
+    res.json(char[0])
+})
+```
 
 ## Branch 6 - error handling middleware
 ```js
